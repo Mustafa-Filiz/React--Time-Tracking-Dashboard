@@ -98,6 +98,10 @@ button:hover{
   color: white;
 }
 
+button:focus{
+  color: white;
+}
+
 .card{
   position: relative;
   width: 200px;
