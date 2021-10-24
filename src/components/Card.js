@@ -1,19 +1,22 @@
-import React from 'react'
-import work from "../images/icon-work.svg"
+import React from 'react';
 
-function Card() {
-	return (
-		<div className="card">
-			<img src={work} alt="icon" />
-			<div className="data">
-				<p className="title">Work</p>
-				<div className="timeframes">
-					<p className="current">32 hrs</p>
-					<p className="previous">Last week - 36 hrs</p>
-				</div>
-			</div>
-		</div>
-	)
+function Card({ data }) {
+    return (
+        <div className="card" style={{backgroundColor: `${data.bgColor}`}}>
+            <img src={data.icon} alt="icon" />
+            <div className="data">
+                <p className="title">{data.title}</p>
+                <div className="timeframes">
+                    <p className="current">
+                        {data.timeframes.weekly.current} hrs
+                    </p>
+                    <p className="previous">
+                        Last week - {data.timeframes.weekly.previous} hrs
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
 }
 
-export default Card
+export default Card;
